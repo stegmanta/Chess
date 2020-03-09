@@ -10,32 +10,27 @@ public class ChessGame{
 
     //first way
     public void placeRook(int rank, int file){
-        Square rookLocation = board.getSquare(rank, file);
-        Square square = board.getSquare(rank, file);
-        
+        Square s = board.getSquare(rank,file);
+
         for(int countRank = 1; countRank < 9; countRank++ ){
-            board.getSquare(countRank,file);
-            square.toggleHighlight();
-            
-            
-        for(int countFile = 1; countFile < 9; countFile++){
-            Square s = board.getSquare(rank,countFile);
-            s.toggleHighlight();
-            s.setPiece("rook");
-
+            for(int countFile = 1; countFile < 9; countFile++){
+                if(countFile )
+                s.toggleHighlight();
+                s.setPiece("rook");
+                s = board.getSquare(countRank,countFile);
+                
+                
+                
+            }
+                
         }
-            
     }
-}
 
 
 
-    public void testPlaceRook(){
-        board.placeRook();
-    }
+
     public void test(){
         board.testBoard();
-        
     }
 
 
@@ -63,6 +58,7 @@ public class ChessGame{
 
     public static void main(String [] args){
         ChessGame gameOne = new ChessGame();
+        gameOne.placeRook(1, 3);
         gameOne.test();
     }
 

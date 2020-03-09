@@ -35,11 +35,11 @@ public class Board{
                 Color currentColor = squares[row][col].getColor();
 
                 if(squares[row][col].isHighlighted()){
-                    System.out.print("=");
+                    System.out.print("|");
                 }else if(currentColor == Color.BLACK){
-                    System.out.print("*");
+                    System.out.print("()");
                 }else if(currentColor == Color.WHITE){
-                    System.out.print("-");
+                    System.out.print("[]");
                 }
 
             }

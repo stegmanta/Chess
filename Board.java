@@ -15,6 +15,8 @@ public class Board{
             for(int col = 0; col < squares[row].length; col++){
                 int rank = squares.length - row;
                 int file = col +1;
+                System.out.print(rank);
+                System.out.print(file);
                 Color color = Color.WHITE;
                 if(isBlack) {
                     color = Color.BLACK;
@@ -35,7 +37,7 @@ public class Board{
                 Color currentColor = squares[row][col].getColor();
 
                 if(squares[row][col].isHighlighted()){
-                    System.out.print("|");
+                    System.out.print("==");
                 }else if(currentColor == Color.BLACK){
                     System.out.print("()");
                 }else if(currentColor == Color.WHITE){
